@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshFruit | Online Fruit Store</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow">
+    <div class="container">
+        <!-- Logo and Brand Name -->
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+            <img src="image/-removebg-preview.png" alt="FreshFruit Logo" style="width: 50px; height: auto; margin-right: 10px;">
+            FreshFruit
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#cart">Cart</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section with Video Background -->
+<section id="home" class="position-relative text-white text-center py-5">
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+        <source src="image/trollishly_youtube_video_downloader.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container position-relative z-index-2">
+        <h1 class="display-4 fw-bold">Fresh, Delicious Fruits</h1>
+        <p class="lead">Delivered directly from the farm to your doorstep</p>
+        <a href="#products" class="btn btn-light btn-lg shadow">Shop Now</a>
+    </div>
+</section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold text-success">About Us</h2>
+                    <p>fresh fruit business can be a great way to promote healthy eating while building a sustainable venture. The key to success lies in offering high-quality products, building strong relationships with suppliers, and understanding market demands. Offering organic and locally-sourced fruits can give your business a competitive edge. You’ll also need to have a reliable storage system to keep the fruits fresh and use proper packaging to prevent damage during transport. By researching your target market and choosing the right sales channels, you can effectively reach your customers.</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="image/istockphoto-1713059332-612x612.jpg" alt="Farmers harvesting fruits" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Products Section-->
+<section id="products" class="py-5">
+    <div class="container">
+        <h2 class="text-center text-success fw-bold mb-4">Our Products</h2>
+        <div class="row g-4">
+            <!-- Apple -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="image/3.jpg" class="card-img-top" alt="Apple" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Apple</h5>
+                        <p class="card-text">Fresh and crunchy apples from local farms.</p>
+                        <p class="text-success fw-bold">$2.50</p>
+                        <div class="d-flex gap-2">
+                            <button onclick="addToCart('Apple', 2.50)" class="btn btn-success w-50">Add to Cart</button>
+                            <button onclick="buyNow('Apple', 2.50)" class="btn btn-primary w-50">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Banana -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="image/2.jpg" class="card-img-top" alt="Banana" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Banana</h5>
+                        <p class="card-text">Sweet bananas full of flavor and nutrients.</p>
+                        <p class="text-success fw-bold">$1.80</p>
+                        <div class="d-flex gap-2">
+                            <button onclick="addToCart('Banana', 1.80)" class="btn btn-success w-50">Add to Cart</button>
+                            <button onclick="buyNow('Banana', 1.80)" class="btn btn-primary w-50">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Orange -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="image/1.jpg" class="card-img-top" alt="Orange" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Orange</h5>
+                        <p class="card-text">Juicy oranges packed with vitamin C.</p>
+                        <p class="text-success fw-bold">$3.00</p>
+                        <div class="d-flex gap-2">
+                            <button onclick="addToCart('Orange', 3.00)" class="btn btn-success w-50">Add to Cart</button>
+                            <button onclick="buyNow('Orange', 3.00)" class="btn btn-primary w-50">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Grapes -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="image/grapes.jpg" class="card-img-top" alt="Grapes" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Grapes</h5>
+                        <p class="card-text">Juicy and sweet seedless grapes, perfect for snacking.</p>
+                        <p class="text-success fw-bold">$4.00</p>
+                        <div class="d-flex gap-2">
+                            <button onclick="addToCart('Grapes', 4.00)" class="btn btn-success w-50">Add to Cart</button>
+                            <button onclick="buyNow('Grapes', 4.00)" class="btn btn-primary w-50">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Mango -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="image/mango.jpg" class="card-img-top" alt="Mango" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Mango</h5>
+                        <p class="card-text">Fresh, ripe mangoes full of tropical sweetness.</p>
+                        <p class="text-success fw-bold">$3.50</p>
+                        <div class="d-flex gap-2">
+                            <button onclick="addToCart('Mango', 3.50)" class="btn btn-success w-50">Add to Cart</button>
+                            <button onclick="buyNow('Mango', 3.50)" class="btn btn-primary w-50">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Strawberry -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="image/strawberry.jpg" class="card-img-top" alt="Strawberry" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Strawberry</h5>
+                        <p class="card-text">Bright red and sweet strawberries, great for desserts.</p>
+                        <p class="text-success fw-bold">$5.00</p>
+                        <div class="d-flex gap-2">
+                            <button onclick="addToCart('Strawberry', 5.00)" class="btn btn-success w-50">Add to Cart</button>
+                            <button onclick="buyNow('Strawberry', 5.00)" class="btn btn-primary w-50">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Kiwi -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="image/kiwi.jpg" class="card-img-top" alt="Kiwi" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Kiwi</h5>
+                        <p class="card-text">Tangy and sweet kiwis, packed with nutrients.</p>
+                        <p class="text-success fw-bold">$4.20</p>
+                        <div class="d-flex gap-2">
+                            <button onclick="addToCart('Kiwi', 4.20)" class="btn btn-success w-50">Add to Cart</button>
+                            <button onclick="buyNow('Kiwi', 4.20)" class="btn btn-primary w-50">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Blueberries -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="image/blueberries.jpg" class="card-img-top" alt="Blueberries" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Blueberries</h5>
+                        <p class="card-text">Fresh blueberries, a superfood bursting with flavor.</p>
+                        <p class="text-success fw-bold">$6.30</p>
+                        <div class="d-flex gap-2">
+                            <button onclick="addToCart('Blueberries', 6.30)" class="btn btn-success w-50">Add to Cart</button>
+                            <button onclick="buyNow('Blueberries', 6.30)" class="btn btn-primary w-50">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Papaya -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="image/papaya.jpg" class="card-img-top" alt="Papaya" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Papaya</h5>
+                        <p class="card-text">Ripe papayas with a tropical taste you'll love.</p>
+                        <p class="text-success fw-bold">$3.80</p>
+                        <div class="d-flex gap-2">
+                            <button onclick="addToCart('Papaya', 3.80)" class="btn btn-success w-50">Add to Cart</button>
+                            <button onclick="buyNow('Papaya', 3.80)" class="btn btn-primary w-50">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Avocado -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="image/avocado.jpg" class="card-img-top" alt="Avocado" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Avocado</h5>
+                        <p class="card-text">Creamy and delicious avocados, perfect for toast.</p>
+                        <p class="text-success fw-bold">$2.90</p>
+                        <div class="d-flex gap-2">
+                            <button onclick="addToCart('Avocado', 2.90)" class="btn btn-success w-50">Add to Cart</button>
+                            <button onclick="buyNow('Avocado', 2.90)" class="btn btn-primary w-50">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pineapple -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="image/pineapple.jpg" class="card-img-top" alt="Pineapple" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Pineapple</h5>
+                        <p class="card-text">Fresh, sweet pineapple, perfect for smoothies and desserts.</p>
+                        <p class="text-success fw-bold">$4.50</p>
+                        <div class="d-flex gap-2">
+                            <button onclick="addToCart('Pineapple', 4.50)" class="btn btn-success w-50">Add to Cart</button>
+                            <button onclick="buyNow('Pineapple', 4.50)" class="btn btn-primary w-50">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pear -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <img src="image/pear.jpg" class="card-img-top" alt="Pear" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Pear</h5>
+                        <p class="card-text">Juicy and sweet pears, a refreshing treat for any time of day.</p>
+                        <p class="text-success fw-bold">$3.20</p>
+                        <div class="d-flex gap-2">
+                            <button onclick="addToCart('Pear', 3.20)" class="btn btn-success w-50">Add to Cart</button>
+                            <button onclick="buyNow('Pear', 3.20)" class="btn btn-primary w-50">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    
+
+
+
+        <!-- Cart Section -->
+        <section id="cart" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center text-success fw-bold mb-4">Your Cart</h2>
+                <!-- Empty Cart Message -->
+                <div id="emptyCartMessage" class="alert alert-warning text-center shadow-sm" role="alert">
+                    Your cart is currently empty! Start adding some fresh fruits to make your day healthier.
+                </div>
+                <!-- Cart Table -->
+                <div id="cartTable" class="d-none">
+                    <table class="table table-bordered shadow-sm">
+                        <thead class="bg-success text-white">
+                            <tr>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Total</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartTableBody"></tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" class="text-end fw-bold">Total:</td>
+                                <td colspan="2" class="fw-bold" id="cartTotal">$0.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+                <!-- Call-to-action Button -->
+                <div class="text-center mt-3">
+                    <a href="#products" class="btn btn-success btn-lg px-5">Browse Products</a>
+                </div>
+            </div>
+        </section>
+        
+    
+        <!-- Contact Section -->
+        <section id="contact" class="py-5 text-white" style="background: url('image/5jpg.jpg') no-repeat center center/cover;">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-4">Get in Touch</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <!-- Contact Form -->
+                        <form class="bg-dark bg-opacity-75 p-4 rounded shadow-lg">
+                            <div class="mb-3">
+                                <label for="name" class="form-label text-white">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label text-white">Your Email</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label text-white">Your Message</label>
+                                <textarea id="message" name="message" class="form-control" rows="4" placeholder="Type your message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    <!-- Footer -->
+    <footer class="bg-success text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 FreshFruit. All rights reserved.</p>
+            <p>Follow us on: <a href="#" class="text-white">Facebook</a> | <a href="#" class="text-white">Instagram</a></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+
+    <script>
+        // Cart Array to Hold Items
+        let cart = [];
+    
+        // Function to Add Items to Cart
+        function addToCart(productName, productPrice) {
+            const existingItem = cart.find(item => item.name === productName);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({ name: productName, price: productPrice, quantity: 1 });
+            }
+            updateCartUI();
+        }
+    
+        // Function to Remove Item from Cart
+        function removeFromCart(productName) {
+            cart = cart.filter(item => item.name !== productName);
+            updateCartUI();
+        }
+    
+        // Function to Update Cart UI
+        function updateCartUI() {
+            const cartTableBody = document.querySelector('#cartTableBody');
+            const cartTotal = document.querySelector('#cartTotal');
+            cartTableBody.innerHTML = '';
+            let total = 0;
+    
+            if (cart.length === 0) {
+                document.querySelector('#emptyCartMessage').classList.remove('d-none');
+                document.querySelector('#cartTable').classList.add('d-none');
+            } else {
+                document.querySelector('#emptyCartMessage').classList.add('d-none');
+                document.querySelector('#cartTable').classList.remove('d-none');
+    
+                cart.forEach(item => {
+                    const itemTotal = item.price * item.quantity;
+                    total += itemTotal;
+    
+                    const row = `<tr>
+                        <td>${item.name}</td>
+                        <td>${item.quantity}</td>
+                        <td>$${item.price.toFixed(2)}</td>
+                        <td>$${itemTotal.toFixed(2)}</td>
+                        <td><button class="btn btn-danger btn-sm" onclick="removeFromCart('${item.name}')">Remove</button></td>
+                    </tr>`;
+                    cartTableBody.innerHTML += row;
+                });
+            }
+    
+            cartTotal.textContent = `$${total.toFixed(2)}`;
+        }
+    
+        // Function to Handle "Buy Now" Button
+        function buyNow(productName, productPrice) {
+            // Add the product to the cart if it's not already added
+            const existingItem = cart.find(item => item.name === productName);
+            if (!existingItem) {
+                cart.push({ name: productName, price: productPrice, quantity: 1 });
+            }
+            // Update the cart UI
+            updateCartUI();
+    
+            // Scroll to the cart section
+            const cartSection = document.getElementById("cart-section");
+            if (cartSection) {
+                cartSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    </script>
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

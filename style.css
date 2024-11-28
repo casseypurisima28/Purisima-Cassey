@@ -1,0 +1,180 @@
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #2C3E50;
+}
+
+a {
+    text-decoration: none;
+    color: #2C3E50;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #1abc9c; /* New vibrant color */
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    width: 150px;
+    height: auto;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+header nav ul li {
+    padding: 5px;
+}
+
+header nav ul li a {
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    background-color: #16a085; /* Darker shade of green for the navbar links */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #1abc9c;
+    transform: scale(1.1);
+}
+
+/* Home Section (Hero Section) */
+#home {
+    background: url('image/hero-background.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 1;
+    animation: fadeIn 2s ease-out;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background: linear-gradient(to right, #1abc9c, #16a085); /* Gradient for a fresh feel */
+    padding: 15px 30px;
+    font-size: 20px;
+    color: white;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background: linear-gradient(to right, #16a085, #1abc9c);
+}
+
+/* About Section */
+#about {
+    padding: 60px 20px;
+    background-color: #ecf0f1; /* Light grey background */
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1abc9c; /* Use the same color from the navbar */
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #34495e;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Product Section */
+#products {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* Footer */
+footer {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Add animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
